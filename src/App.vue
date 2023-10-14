@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1> Dimitri </h1>
+  <div class="flex flex-col h-screen bg-white dark:bg-gray-900">
+    <NavigationComp />
 
     <div>
       <router-view />
@@ -10,5 +10,5 @@
 
 <script setup>
 import { RouterView } from 'vue-router'
-
+import NavigationComp from './components/NavigationComp.vue'
 </script>
