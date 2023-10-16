@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "p5": "^1.7.0",
     "vue": "^3.3.4",
     "vue-gtag": "^2.0.1",
     "vue-router": "^4.2.5"
