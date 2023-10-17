@@ -4,7 +4,7 @@
 
         <!-- Social links -->
         <div class="flex justify-center">
-            <a href="https://www.linkedin.com/in/dimitri-vlachos/" target="_blank" rel="noopener noreferrer" class="mx-4">
+            <a href="https://www.linkedin.com/in/dimitri-vlachos/" target="_blank" rel="noopener noreferrer" class="mx-4 p-1 bg-gray-900 hover:bg-black rounded-md">
                 <LinkedInSVG width="40" height="40" class="inline"/><p class="inline font-thin pl-2">LinkedIn</p>
             </a>
             <a href="https://github.com/dimitrivlachos" target="_blank" rel="noopener noreferrer" class="mx-4">
