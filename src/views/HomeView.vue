@@ -11,6 +11,7 @@
                 </p>
                 <!-- p5 sketch -->
                 <ParticleNetworkComp />
+                <DeepParticleNetworkComp />
                 <div class="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
                     <div class="p-6 mt-6 text-left border w-96 rounded-xl shadow-xl bg-slate-700">
                         <h3 class="text-2xl font-bold">About Me</h3>
@@ -37,11 +38,13 @@
 <script>
     import p5 from '../components/p5/p5.vue';
     import ParticleNetworkComp from '../components/p5/ParticleNetworkComp.vue';
+    import DeepParticleNetworkComp from '../components/p5/DeepParticleNetworkComp.vue';
 
     export default {
         components: {
             p5,
-            ParticleNetworkComp
+            ParticleNetworkComp,
+            DeepParticleNetworkComp
         }
     }
 </script>
