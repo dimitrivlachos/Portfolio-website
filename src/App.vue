@@ -1,14 +1,12 @@
 <template>
   <!-- <div class="flex flex-col h-screen bg-white dark:bg-gray-900"> -->
-    <div class="bg-gray-900">
-  <div class="flex flex-col h-screen bg-gradient-to-t bg-gray-800">
+  <div class="bg-gray-800">
     <NavigationComp />
 
     <div>
       <router-view />
     </div>
   </div>
-</div>
 </template>
 
 <script setup>
