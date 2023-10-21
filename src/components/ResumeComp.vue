@@ -1,19 +1,21 @@
 <template>
     <!-- Two-column section -->
-    <div class="md:grid md:grid-cols-3 lg:grid-cols-4 justify-center bg-gray-800">
+    <div class="md:grid md:grid-cols-3 lg:grid-cols-4 justify-center bg-white dark:bg-gray-800">
 
         <!-- Social div -->
         <div class="flex justify-center md:block">
         <div class="flex justify-top md:flex-col lg:col-span-1 p-4 md:sticky md:top-0">
+            <!-- LinkedIn Button -->
                 <a href="https://www.linkedin.com/in/dimitri-vlachos/" target="_blank" rel="noopener noreferrer"
                     class="h-full md:h-auto flex cursor-pointer justify-between items-center border-2 border-solid border-slate-700 hover:bg-gray-700 p-2 rounded-lg">
                     <LinkedInSVG width="40" height="40" class="inline" />
                     <p class="inline text-2xl pl-2">LinkedIn</p>
                     <div class="inline-block"></div>
                 </a>
+                <!-- GitHub Button -->
                 <a href="https://github.com/dimitrivlachos" target="_blank" rel="noopener noreferrer"
                     class="h-full md:h-auto ml-2 md:ml-0 md:mt-4 flex cursor-pointer justify-between items-center border-2 border-solid border-slate-700 hover:bg-gray-700 p-2 rounded-lg">
-                    <GitHubSVG width="40" height="40" color="#FFFFFF" class="inline" />
+                    <GitHubSVG width="40" height="40" :color="githubButtonColour" class="inline" />
                     <p class="inline text-2xl pl-2">GitHub</p>
                     <div class="inline-block"></div>
                 </a>
@@ -250,6 +252,7 @@ import GitHubSVG from '../assets/svg/GitHubSVG.vue';
 export default {
     data() {
         return {
+            isDarkMode: false,
             isShowShareCode: false,
             shareCode: "W3G A25 3CC",
             uniResults: [
@@ -278,11 +281,28 @@ export default {
             console.log("Clicked");
             this.isShowShareCode = true;
             document.getElementById("share").innerHTML = this.shareCode;
-        }
+        },
+        detectColorScheme() {
+            // Detects if user has dark mode enabled
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                this.isDarkMode = true;
+            }
+        },
     },
     components: {
         LinkedInSVG,
         GitHubSVG
+    },
+    mounted() {
+        this.detectColorScheme();
+    },
+    computed: {
+        theme() {
+            return this.isDarkMode ? 'dark' : 'light';
+        },
+        githubButtonColour() {
+            return this.isDarkMode ? '#A0A0A0' : '#161614';
+        }
     }
 };
 </script>
